@@ -1,0 +1,23 @@
+gate:
+  ignore:
+    startWith: /static,/auth/jwt
+    contain: .
+  oauth:
+    prefix: /jwt
+  jwt:
+    secret: Xe*g@1jda
+    expiration: 7200
+    header: access-token
+
+
+
+#请求和响应GZIP压缩支持
+feign:
+  compression:
+    request:
+      enabled: true
+      mime-types: text/xml,application/xml,application/json
+      min-request-size: 2048
+    response:
+      enabled: true
+

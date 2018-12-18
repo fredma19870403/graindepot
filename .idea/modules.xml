@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/graindepot.iml" filepath="$PROJECT_DIR$/graindepot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/graindepot-eureka/graindepot-eureka.iml" filepath="$PROJECT_DIR$/graindepot-eureka/graindepot-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/graindepot-gateway/graindepot-gateway.iml" filepath="$PROJECT_DIR$/graindepot-gateway/graindepot-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/graindepot-user/graindepot-user.iml" filepath="$PROJECT_DIR$/graindepot-user/graindepot-user.iml" />
+    </modules>
+  </component>
+</project>

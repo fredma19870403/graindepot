@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="graindepot-eureka:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/graindepot_eureka_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="graindepot-eureka/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="graindepot-eureka" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,66 @@
+spring:
+    application:
+        name: graindepot-gateway-zuul
+    jmx:
+        enabled: false
+    thymeleaf:
+        mode: LEGACYHTML5
+        cache: false
+    jackson:
+            date-format: yyyy-MM-dd HH:mm:ss
+            time-zone: GMT+8
+            default-property-inclusion: non_null
+    cloud:
+          loadbalancer:
+              retry:
+                 enabled: true
+    http:
+          multipart:
+              max-file-size: 100MB # 设置单个文件的最大长度
+              max-request-size: 100MB # 设置最大的请求文件的大小
+    redis:
+        host: 127.0.0.1
+        port: 6379
+        timeout: 10000
+
+server:
+    port: 8001 #启动端口
+zuul:
+  sensitiveHeaders:
+  #add-host-header: true
+  max:
+    host:
+      connections: 500
+  host:
+    socket-timeout-millis: 10000
+    connect-timeout-millis: 10000
+  routes:
+    user:
+      path: /graindepot-user/**
+      serviceId: graindeport-user
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          strategy: SEMAPHORE
+          thread:
+            timeoutInMilliseconds: 60000
+eureka:
+    instance:
+            statusPageUrlPath: /login
+            healthCheckUrlPath: /health
+            fetchRegistry: false
+            prefer-ip-address: true
+    client:
+            serviceUrl:
+                defaultZone: http://localhost:8761/eureka
+            healthCheck:
+                enabled: true
+security:
+    user:
+        name: admin
+        password: admin
+        role: USER
