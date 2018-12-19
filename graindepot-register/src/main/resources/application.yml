@@ -1,0 +1,47 @@
+spring:
+    application:
+        name: graindepot-register
+    jmx:
+        enabled: false
+    thymeleaf:
+        mode: LEGACYHTML5
+        cache: false
+    datasource:
+        name: graindepot
+        url: jdbc:mysql://127.0.0.1:3306/graindepot
+        username: root
+        password: root
+        driverClassName: com.mysql.jdbc.Driver
+        filters: stat
+        maxActive: 20
+        initialSize: 1
+        maxWait: 60000
+        minIdle: 1
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxOpenPreparedStatements: 20
+    redis:
+        host: 127.0.0.1
+        port: 6379
+        timeout: 10000
+#mybatis:
+#    basepackage: com.zhoubi.graindepot.mapper
+#    xmlLocation: classpath:mapper/**/*.xml
+#    jdbcTypeForNull: NULL
+server:
+    port: 8003 #Æô¶¯¶Ë¿Ú
+eureka:
+    instance:
+            statusPageUrlPath: /info
+            healthCheckUrlPath: /health
+            fetchRegistry: false
+            prefer-ip-address: true
+    client:
+            serviceUrl:
+                defaultZone: http://localhost:8761/eureka
+            healthCheck:
+                enabled: true

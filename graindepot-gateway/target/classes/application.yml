@@ -36,8 +36,11 @@ zuul:
     connect-timeout-millis: 10000
   routes:
     user:
-      path: /graindepot-user/**
-      serviceId: graindeport-user
+        path: /graindepot-user/**
+        serviceId: graindepot-user
+    register:
+        path: /graindepot-register/**
+        serviceId: graindepot-register
 hystrix:
   command:
     default:

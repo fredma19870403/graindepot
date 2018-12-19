@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/graindepot.iml" filepath="$PROJECT_DIR$/graindepot.iml" />
       <module fileurl="file://$PROJECT_DIR$/graindepot-eureka/graindepot-eureka.iml" filepath="$PROJECT_DIR$/graindepot-eureka/graindepot-eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/graindepot-gateway/graindepot-gateway.iml" filepath="$PROJECT_DIR$/graindepot-gateway/graindepot-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/graindepot-register/graindepot-register.iml" filepath="$PROJECT_DIR$/graindepot-register/graindepot-register.iml" />
       <module fileurl="file://$PROJECT_DIR$/graindepot-user/graindepot-user.iml" filepath="$PROJECT_DIR$/graindepot-user/graindepot-user.iml" />
     </modules>
   </component>

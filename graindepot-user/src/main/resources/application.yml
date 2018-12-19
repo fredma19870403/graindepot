@@ -29,7 +29,7 @@ spring:
         port: 6379
         timeout: 10000
 mybatis:
-    basepackage: com.fred.graindepot.mapper
+    basepackage: com.zhoubi.graindepot.mapper
     xmlLocation: classpath:mapper/**/*.xml
     jdbcTypeForNull: NULL
 server:

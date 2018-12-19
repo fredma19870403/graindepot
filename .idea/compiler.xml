@@ -24,6 +24,7 @@
         <processorPath useClasspath="true" />
         <module name="graindepot-eureka" />
         <module name="graindepot-gateway" />
+        <module name="graindepot-register" />
         <module name="graindepot-user" />
       </profile>
     </annotationProcessing>
@@ -31,6 +32,7 @@
       <module name="graindepot" target="1.6" />
       <module name="graindepot-eureka" target="1.6" />
       <module name="graindepot-gateway" target="1.6" />
+      <module name="graindepot-register" target="1.6" />
       <module name="graindepot-user" target="1.6" />
     </bytecodeTargetLevel>
   </component>
