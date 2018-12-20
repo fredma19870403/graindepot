@@ -1,7 +1,6 @@
 package com.zhoubi.graindepot.filter;
 
 import com.alibaba.fastjson.JSON;
-import com.zhoubi.graindepot.entity.UserInfo;
 import com.zhoubi.graindepot.rpc.IUserService;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
@@ -9,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.context.SecurityContextImpl;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.session.Session;
 import org.springframework.session.SessionRepository;
 import org.springframework.stereotype.Component;
@@ -68,7 +68,7 @@ public class SessionAccessFilter extends ZuulFilter {
         HttpServletRequest request = ctx.getRequest();
         final String requestUri = request.getRequestURI();
         final String method = request.getMethod();
-        UserInfo user = getSessionUser(httpSession);
+        User user = getSessionUser(httpSession);
         String username = null;
         if (user != null) {
             username = user.getUsername();
@@ -107,13 +107,13 @@ public class SessionAccessFilter extends ZuulFilter {
      * @param httpSession
      * @return
      */
-    private UserInfo getSessionUser(HttpSession httpSession) {
+    private User getSessionUser(HttpSession httpSession) {
         Session session = repository.getSession(httpSession.getId());
         if (httpSession.getAttribute("SPRING_SECURITY_CONTEXT") == null)
             return null;
         SecurityContextImpl securityContextImpl =
                 (SecurityContextImpl) httpSession.getAttribute("SPRING_SECURITY_CONTEXT");
-        return (UserInfo) securityContextImpl.getAuthentication().getPrincipal();
+        return (User) securityContextImpl.getAuthentication().getPrincipal();
     }
 
     private void setCurrentUser(HttpSession httpSession, String username) {
