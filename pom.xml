@@ -12,6 +12,7 @@
         <module>graindepot-eureka</module>
         <module>graindepot-gateway</module>
         <module>graindepot-user</module>
+        <module>graindepot-register</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
