@@ -26,6 +26,7 @@
         <module name="graindepot-gateway" />
         <module name="graindepot-register" />
         <module name="graindepot-user" />
+        <module name="graindepot.register" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -34,6 +35,7 @@
       <module name="graindepot-gateway" target="1.6" />
       <module name="graindepot-register" target="1.6" />
       <module name="graindepot-user" target="1.6" />
+      <module name="graindepot.register" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>
